@@ -33,4 +33,3 @@ Your goal in this excersice is to:
 * Fork this repository and upload your solution then provide us with a link.
 * Feel free to code it in any language you would like and use any framework / library / snippet of code you find.
 * We are avaialbe for any question you have so feel free to ask.
-* At the end of the exersice we will schedule a short meeting to talk about the suggested solution.
