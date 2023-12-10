@@ -9,4 +9,4 @@ def json_example():
     return jsonify(sensors)  
 
 if __name__ == '__main__':
-    app.run(debug=True, port=1337)
+    app.run(debug=True, port=1337, host="0.0.0.0")
