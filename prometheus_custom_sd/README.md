@@ -3,7 +3,7 @@ In Trigo's solution there are many proprietary sensors based on embedded microco
 
 In addition, the store operators can change the participating sensors so the inventory of sensors can be updated quite often.
 
-In this excersie we are going to implement custom service discovery for prometheus so even when the sensors configuration is changed continously, prometheus will keep monitoring the right sensor's inventory.
+In this exercise we are going to implement custom service discovery for prometheus so even when the sensors configuration is changed continously, prometheus will keep monitoring the right sensor's inventory.
 
 # Exercise
 The [inventory service](https://github.com/trigovision/interview_exercises/tree/main/devops/prometheus_custom_sd/inventory_server) will be used to expose an http endpoint that yields a list of hosts of the current active sensors.
