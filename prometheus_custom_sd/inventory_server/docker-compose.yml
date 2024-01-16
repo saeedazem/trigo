@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  inventory-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1337:1337"
+
+  custom-sd:
+    build:
+      context: .
+      dockerfile: Dockerfile.custom-sd
+    depends_on:
+      - inventory-service
+    ports:
+      - "5001:5001"
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - custom-sd

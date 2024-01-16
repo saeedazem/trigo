@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+WORKDIR /app
+
+COPY custom_sd.py .
+
+RUN pip install Flask requests
+
+CMD ["python3", "custom_sd.py"]

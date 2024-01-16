@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'custom-sd'
+    static_configs:
+      - targets: ['custom-sd:5001']
+    metrics_path: '/inventory'
+    relabel_configs:
+      - source_labels: [__address__]
+        regex: '(.*):5001'
+        target_label: '__param_target'
+      - source_labels: [__param_target]
+        regex: '(.*)'
+        target_label: 'instance'
+      - target_label: __address__
+        replacement: 'custom-sd:5001'
